@@ -1,0 +1,8 @@
+{
+  "short_name": "Test",
+  "name": "Test",
+  "icons": [],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff"
+}

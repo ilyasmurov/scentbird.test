@@ -1,0 +1,16 @@
+.group {
+  margin-bottom: 40px;
+}
+
+.group h2 {
+  margin: 0 0 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media all and (min-width: 1180px) {
+  .group h2 {
+    font-size: 24px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,152 @@
+.field {
+  width: 100%;
+  flex: 1;
+  border: 1px solid #e6e6e6;
+  position: relative;
+  background-color: #fff;
+  z-index: 0;
+  margin-bottom: 20px;
+  transition: .2s border ease-in-out;
+}
+.field.notice.notice {
+  margin-bottom: 30px;
+  border-color: red;
+}
+
+.field input {
+  border: 0;
+  padding: 14px;
+  font-size: 18px;
+  color: #000;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+.field input:focus {
+  border: 0;
+}
+
+.field label {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  z-index: -1;
+  padding: 0 4px;
+  transition: .1s font-size, .1s top, .1s background;
+}
+.field.notice.notice label {
+  color: red;
+}
+.field label:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 8px;
+  height: 2px;
+  background-color: #fff;
+  z-index: -1;
+  transition: .3s left ease-in-out, .3s right ease-in-out;
+}
+
+.field .status {
+  position: absolute;
+  bottom: -22px;
+  left: 16px;
+  font-size: 12px;
+  color: red;
+}
+
+.field.focus {
+  border-color: rgba(255, 69, 143, 0.6);
+}
+
+.field.transformation label {
+  font-size: 14px;
+  color: #9B9B9B;
+  top: -9px;
+  z-index: 1;
+}
+.field.transformation label:after {
+  left: -6px;
+  right: -6px;
+}
+
+.field.submit {
+  border: 0;
+}
+.field.submit button {
+  background-color: #FF458F;
+  border: 1px solid transparent;
+  padding: 16px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* .field + .group {
+  margin-bottom: 20px;
+} */
+
+.group {
+  margin-bottom: 20px;
+}
+
+.group .field {
+  margin-bottom: 20px;
+}
+
+.group .field:not(:last-child) {
+  margin-right: 20px;
+}
+
+.group .textField {
+  display: block;
+  padding: 14px 0;
+  font-size: 14px;
+  line-height: 20px;
+  flex: 1;
+}
+
+@media all and (min-width: 768px) {
+  .group {
+    display: flex;
+    flex-direction: row;
+  }
+  .group .field {
+    margin-bottom: auto;
+  }
+  .field.notice.notice {
+    margin-bottom: 20px;
+  }
+
+  .field.submit {
+    display: flex;
+  }
+  .field.submit button {
+    width: auto;
+    margin-left: auto;
+    font-size: 18px;
+    padding-left: 60px;
+    padding-right: 100px;
+    position: relative;
+  }
+  .field.submit button img {
+    transition: transform .1s ease-in-out;
+    position: absolute;
+    right: 60px;
+    top: 17px;
+  }
+  .field.submit button:hover img {
+    transform: translateX(20px);
+  }
+}
+
+@media all and (min-width: 1180px) {
+  .group {
+  }
+}

@@ -1,0 +1,51 @@
+.container {
+  
+}
+
+.image {
+  display: flex;
+  height: 309px;
+}
+.image img {
+  margin: auto;
+}
+.wrap {
+  margin-top: 40px;
+  border-top: 1px solid #E6E6E6;
+  padding-top: 10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  padding: 7px 0;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.item.total {
+  margin-top: 10px;
+  padding-top: 18px;
+  border-top: 1px solid #E6E6E6;
+}
+.item.coupon {
+  margin-top: 20px;
+}
+.item:first-child {
+
+}
+.item:last-child {
+  text-align: right;
+}
+
+@media all and (min-width: 320px) {
+  .container {
+    border: 1px solid #E6E6E6;
+    padding: 40px 30px;
+  }
+}
+
+@media all and (min-width: 1180px) {
+  .container {
+    
+  }
+}
